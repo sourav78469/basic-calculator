@@ -1,0 +1,89 @@
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+}
+
+.controls {
+    margin-bottom: 30px;
+}
+
+.controls input, .controls button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.countdown-container {
+    display: flex;
+    gap: 40px;
+}
+
+.circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px dotted #111;
+    z-index: 1;
+}
+
+.circle .number {
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.circle .label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    z-index: 2;
+}
+
+.circle .dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #0ff;
+    opacity: 0.2;
+}
+
+.dot.active {
+    opacity: 1;
+}
